@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  tensor:
+    container_name: tensor-gpu
+    build: ./Dockerfile
+    volumes:
+    - .:/app
+    working_dir: /app
