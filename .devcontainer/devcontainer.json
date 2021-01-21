@@ -1,0 +1,31 @@
+{
+    "name": "Tensor-gpu",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "workspace",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+        //
+        "donjayamanne.python-extension-pack",
+		"ms-python.vscode-pylance",
+        //
+		"oderwat.indent-rainbow",
+		"christian-kohler.path-intellisense",
+		"2gua.rainbow-brackets",
+		"mosapride.zenkaku",
+		"tomoki1207.vscode-input-sequence",
+		"quicktype.quicktype",
+		"eamodio.gitlens",
+		"donjayamanne.githistory",
+		"mhutchie.git-graph",
+		"wmaurer.change-case",
+		"ms-azuretools.vscode-docker",
+		"ms-kubernetes-tools.vscode-kubernetes-tools",
+		"visualstudioexptteam.vscodeintellicode",
+		"mechatroner.rainbow-csv",
+		"tomoki1207.pdf",
+		"ics.japanese-proofreading",
+	],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+}
