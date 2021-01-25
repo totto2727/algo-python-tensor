@@ -188,12 +188,13 @@ def main():
     )
     y_test = tf.keras.utils.to_categorical(range(0, 10))
 
-    device_type = 'GPU'
-    if device_type == 'GPU' and tf.config.list_physical_devices("GPU") != []:
+    #GPU非搭載のPCや仮想環境で実行する場合はCPUにしてください
+    device_type = 'CPU' #CPU or GPU
+    if device_type == 'CPU':
+        os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+    else:
         gpu_devices = tf.config.experimental.list_physical_devices('GPU')
         tf.config.experimental.set_memory_growth(gpu_devices[0], True)
-    else :
-        os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
     print(tf.config.list_physical_devices())
 
